@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        withMaven(maven: 'Maven 3.1.1') {
+        withMaven(maven: 'Maven 3.3.9') {
           sh 'mvn install -Dmaven.test.skip=true'
         }
         
