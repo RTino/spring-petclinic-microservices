@@ -1,4 +1,6 @@
 @Library('utils') import static com.foo.Utilities.*
 node {
-  mvn this, 'clean package'
+  stage('Checkout and Build') {
+    mvn this, 'clean package'
+  }
 }
