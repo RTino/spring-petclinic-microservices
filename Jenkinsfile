@@ -1,9 +1,5 @@
-@Library('Global Jenkins Lib') import static com.foo.Utilities.*
+k@Library('utils') import org.foo.Utilities
+def utils = new Utilities(steps)
 node {
-    stage('Checkout and Build') {
-        checkout scm
-        wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
-	    color_sh this 'echo test; mvn install -Dmaven.test.skip=true'
-        }
-    }
+  utils.mvn 'clean package'
 }
