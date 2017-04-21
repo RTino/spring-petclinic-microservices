@@ -1,3 +1,4 @@
+library 'Global Jenkins Lib'
 pipeline {
   agent any
   stages {
