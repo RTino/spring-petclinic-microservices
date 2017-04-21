@@ -1,5 +1,4 @@
-@Library('utils') import com.foo.Utilities
-def utils = new Utilities(steps)
+@Library('utils') import static com.foo.Utilities.*
 node {
-  utils.mvn 'clean package'
+  mvn this, 'clean package'
 }
