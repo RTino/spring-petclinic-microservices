@@ -1,5 +1,4 @@
-library 'Global Jenkins Lib'
-
+@Library('Global Jenkins Lib') import static com.foo.Utilities.*
 pipeline {
   agent any
   stages {
