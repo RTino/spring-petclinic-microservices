@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        withMaven(maven: 'Maven 3.1.1') {
+        (maven: 'Maven 3.3.9') {
 
           library 'Global Jenkins Lib'
           color_sh 'mvn install -Dmaven.test.skip=true'
